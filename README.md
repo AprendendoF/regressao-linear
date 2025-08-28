@@ -1,43 +1,43 @@
 # 📈 TimeWise Regression - Regressão Linear Pura em Rust
 
-Projeto desenvolvido para a disciplina de Programação de Sistemas com foco na **implementação pura de regressão linear em Rust**, sem uso de bibliotecas externas.
+Projeto desenvolvido para a disciplina de Programação de Sistemas, focado na **implementação pura de regressão linear em Rust**, sem uso de bibliotecas externas.
 
-> 🚀 Este módulo simula parte da ferramenta interna da startup fictícia **TimeWise Analytics**, especializada em análise e previsão de séries temporais.
+> Este módulo simula parte da ferramenta interna de análise de séries temporais da startup fictícia **TimeWise Analytics**.
 
 ---
 
 ## 📌 Objetivo
 
-Desenvolver uma solução eficiente em Rust para:
+O projeto tem como objetivo:
 
-- Calcular uma regressão linear simples a partir de uma série temporal;
-- Avaliar o modelo utilizando métricas como **R²** e **MSE**;
-- Realizar **previsões futuras** com base no modelo gerado;
-- Garantir qualidade e segurança com **testes unitários** e documentação clara.
+- Implementar uma regressão linear simples em Rust a partir de uma série temporal;
+- Avaliar o modelo utilizando métricas como **R²** (coeficiente de determinação) e **MSE** (erro quadrático médio);
+- Realizar **previsões futuras** com base nos coeficientes calculados;
+- Garantir robustez e confiabilidade por meio de **testes unitários**.
 
 ---
 
-## 🛠️ Funcionalidades Implementadas
+## 🛠️ Funcionalidades
 
 | Função                  | Descrição                                                                |
 |-------------------------|--------------------------------------------------------------------------|
-| `regressao_linear`      | Calcula os coeficientes da reta (y = ax + b) com base nos dados          |
+| `regressao_linear`      | Calcula os coeficientes da reta (y = ax + b) a partir dos dados          |
 | `calcular_r2`           | Calcula o coeficiente de determinação R²                                 |
 | `calcular_mse`          | Calcula o erro quadrático médio (MSE)                                    |
-| `prever`                | Realiza previsão para um novo valor `x` usando os coeficientes gerados   |
+| `prever`                | Faz previsões para novos valores `x` usando os coeficientes calculados   |
 
 ---
 
 ## 🧪 Testes
 
-Todos os módulos foram validados por **testes unitários**:
+O projeto inclui **testes unitários** que verificam:
 
-- ✅ Regressão linear correta
-- ✅ Cálculo preciso de R² e MSE
-- ✅ Previsão funcional
-- ✅ Tratamento de vetores inválidos
+- Correção da regressão linear;
+- Cálculo correto das métricas R² e MSE;
+- Funcionamento da função de previsão;
+- Tratamento de entradas inválidas (vetores de tamanhos diferentes ou vazios).
 
-> Prints dos testes unitários bem-sucedidos estão disponíveis no arquivo `testes.pdf`.
+> Os prints dos testes podem ser gerados no terminal após rodar `cargo test`.
 
 ---
 
@@ -61,36 +61,30 @@ fn main() {
     }
 }
 📂 Estrutura do Projeto
-bash
-Copiar
-Editar
+kotlin
+Copiar código
 timewise-regression/
 ├── src/
-│   ├── lib.rs          # Lógica principal
+│   ├── lib.rs          # Lógica principal (funções e regressão)
 │   └── main.rs         # Exemplo de execução
 ├── Cargo.toml          # Manifesto do projeto
 ├── README.md           # Este arquivo
-└── testes.pdf          # Prints dos testes unitários
+└── testes.pdf          # Prints dos testes unitários (opcional)
 🤔 Limitações
-O modelo é simples: regressão linear univariada;
+O modelo implementado é univariado (apenas uma variável independente);
 
-Não lida com sazonalidades, autocorrelação ou dados não lineares;
+Não considera padrões sazonais, autocorrelação ou não linearidades;
 
-Ideal para padrões lineares simples em séries temporais.
-
-🎥 Demonstração em Vídeo
-📽️ Veja a explicação do projeto e da lógica aplicada no seguinte link:
-
-🔗 YouTube - TimeWise Regression (explicação)
+Ideal para séries temporais simples com tendência linear.
 
 🧠 Estratégias Adotadas
-Implementação 100% manual dos cálculos estatísticos;
+Implementação manual dos cálculos estatísticos, sem crates externas;
 
-Uso de testes para garantir robustez contra entradas inválidas;
+Testes unitários para garantir robustez e confiabilidade;
 
-Código modularizado e comentado para facilitar manutenção e extensão futura;
+Código modularizado e comentado, facilitando manutenção e futuras melhorias;
 
-Evitado uso de crates externos para seguir as exigências de "regressão linear pura".
+Validação de entradas inválidas para evitar erros de execução.
 
 👨‍💻 Autor
 Breno Ferreira
